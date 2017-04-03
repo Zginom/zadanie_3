@@ -4,18 +4,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.daniel.moje_pierwsze.Obrazek">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:text="Obrazki"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/android2"
+        app:srcCompat="@mipmap/android2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="123dp"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="51dp"
-        app:srcCompat="@mipmap/android2" />
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powrót"
+        android:id="@+id/powrot"
+        android:layout_below="@id/android2"
+        android:layout_toLeftOf="@+id/zmien"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="powrot" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zmień"
+        android:id="@+id/zmien"
+        android:layout_below="@id/android2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="nastepny" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poprzedni"
+        android:id="@+id/poprzedni"
+        android:layout_toRightOf="@id/zmien"
+        android:layout_below="@id/android2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="poprzedni" />
+
+
 </RelativeLayout>
